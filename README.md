@@ -1,4 +1,4 @@
-# awesome-controllable-editing-SD
+# awesome-controllable-stable-diffusion
 
 A Survey of Controllable Editing Stable Diffusion
 
@@ -186,9 +186,7 @@ A Survey of Controllable Editing Stable Diffusion
 ### UniTune: Text-Driven Image Editing by Fine Tuning an Image Generation Model on a Single Image ([arxiv](https://arxiv.org/abs/2210.09477), 17 Oct 2022)
 
 1. Problem: Current image editing methods require additional inputs, such as masks or sketches, and lack intuitive art-direction.
-
 2. Solution: UniTune uses a single image and a textual edit description to fine-tune a large text-to-image diffusion model, allowing expressive manipulations while maintaining fidelity to the input image.
-
 3. Insight: The right choice of parameters enables fine-tuning of large-scale models on a single image.
 
 ### Unifying Diffusion Models' Latent Space, with Applications to CycleDiffusion and Guidance ([arxiv](https://arxiv.org/abs/2210.05559), 11 Oct 2022)
@@ -214,5 +212,3 @@ A Survey of Controllable Editing Stable Diffusion
 1. Problem: How can we use language-guided models to generate images of specific unique concepts, modify their appearance, or compose them in new roles and novel scenes?
 2. Solution: The authors present a simple approach that allows creative freedom in text-to-image generation. Using only 3-5 images of a user-provided concept, they learn to represent it through new "words" in the embedding space of a frozen text-to-image model. These "words" can be composed into natural language sentences, guiding personalized creation in an intuitive way.
 3. Insight: The authors find evidence that a single word embedding is sufficient for capturing unique and varied concepts, and demonstrate that their approach can more faithfully portray concepts across a range of applications and tasks.
-
-# Pretraining is All You Need for Image-to-Image Translation
