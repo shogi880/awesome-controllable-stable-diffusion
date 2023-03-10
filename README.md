@@ -2,7 +2,7 @@
 
 A Survey of Controllable Editing Stable Diffusion
 
-## Papers
+## Paper List
 
 ### Cones: Concept Neurons in Diffusion Models for Customized Generation ([arxiv](https://arxiv.org/abs/2303.05125), 9 Mar 2023)
 
