@@ -31,9 +31,64 @@ A Survey of Controllable Editing Stable Diffusion
 3. Insight: The proposed method enables high-fidelity inversion and robust editability of primary concepts while excluding irrelevant disturbances, with a significantly faster encoding process compared to prior optimization-based approaches.
 4. Limitation: The limitations of the proposed method are not explicitly stated in the abstract.
 
-### Encoder-based Domain Tuning for Fast Personalization of Text-to-Image Models([arxiv](https://arxiv.org/abs/2302.12228), 23 Feb 2023)
+### Encoder-based Domain Tuning for Fast Personalization of Text-to-Image Models ([arxiv](https://arxiv.org/abs/2302.12228), 23 Feb 2023)
 
 1. Problem: Current text-to-image personalization approaches have limitations in terms of lengthy training times, high storage requirements, or loss of identity.
 2. Solution: Encoder-based domain tuning approach by underfitting on a large set of concepts from a given domain, employing an encoder and regularized weight-offsets for the text-to-image model.
 3. Insight: Underfitting on a large set of concepts from a given domain improves generalization and creates a model that is more amenable to quickly adding novel concepts from the same domain.
 4. Limitation: The proposed approach may not generalize well to domains with highly diverse or unrelated concep
+
+### Controlled and Conditional Text to Image Generation with Diffusion Prior ([arxiv](https://arxiv.org/abs/2302.11710), 23 Feb 2023)
+
+1. Problem: Limited exploration of the potential of the Diffusion Prior approach in generating images from text, and lack of control over domain-specific generation and color conditioning.
+2. Solution: Explore the capabilities of the Diffusion Prior and use it in a memory and compute efficient way to constrain generation to a specific domain, and train it with additional conditional information such as color histogram to further control generation.
+3. Insight: The Diffusion Prior can be used as an intermediate CLIP representation to generate images from text and provides advantages in domain-specific generation and color conditioning.
+
+### Composer: Creative and Controllable Image Synthesis with Composable Conditions ([arxiv](https://arxiv.org/abs/2302.09778), 20 Feb 2023)
+
+1. Problem: Limited controllability in generative models for image synthesis.
+2. Solution: Composer, a generative model that offers flexible control of output images through compositionality and decomposition of representative factors.
+3. Insight: Rich intermediate representations can be used as composable elements to exponentially increase the design space for customizable content creation.
+
+### T2I-Adapter: Learning Adapters to Dig out More Controllable Ability for Text-to-Image Diffusion Models ([arxiv](https://arxiv.org/abs/2302.08453), 16 Feb 2023)
+
+1. Problem: Text-to-image (T2I) models have strong generative ability but are limited in terms of flexible and accurate structure control when relying solely on text prompts.
+2. Solution: The authors propose to learn T2I-Adapters to align internal knowledge in T2I models with external control signals, allowing for more granular generation control and editing effects.
+3. Insight: T2I models have implicit knowledge that can be explicitly utilized through the use of T2I-Adapters, which can be trained for various conditions and have practical properties such as composability and generalization ability.
+4. Limitation: This is a technical report, not a peer-reviewed paper, and the proposed method's limitations are not explicitly stated
+
+### MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation ([arxiv](https://arxiv.org/abs/2302.08113), 16 Feb 2023)
+
+1. Problem: The user controllability of generated images and fast adaptation to new tasks are still open challenges in text-to-image generation with diffusion models, requiring costly and time-consuming re-training or ad-hoc adaptations.
+2. Solution: The authors propose MultiDiffusion, a unified framework that enables versatile and controllable image generation using a pre-trained text-to-image diffusion model without further training or fine-tuning. Their approach involves an optimization task that binds together multiple diffusion generation processes with shared parameters or constraints.
+3. Insight: MultiDiffusion can generate high-quality and diverse images that adhere to user-provided controls such as aspect ratio and spatial guiding signals ranging from segmentation masks to bounding boxes.
+
+### Universal Guidance for Diffusion Models ([arxiv](https://arxiv.org/abs/2302.07121), 14 Feb 2023)
+
+1. Problem: Diffusion models are typically trained to accept a particular form of conditioning, such as text, and cannot be conditioned on other modalities without retraining.
+2. Solution: The authors propose a universal guidance algorithm that allows diffusion models to be controlled by any guidance modality without the need for retraining specific components.
+3. Insight: The algorithm successfully generates high-quality images using guidance functions such as segmentation, face recognition, object detection, and classifier signals.
+
+### Adding Conditional Control to Text-to-Image Diffusion Models ([arxiv](https://arxiv.org/abs/2302.05543), 10 Feb 2023)
+
+1. Problem: Large diffusion models like Stable Diffusion lack the ability to incorporate additional input conditions such as edge maps, segmentation maps, keypoints, etc.
+2. Solution: The authors present ControlNet, a neural network structure that can control pretrained large diffusion models to support additional input conditions.
+3. Insight: ControlNet learns task-specific conditions in an end-to-end way, even when the training dataset is small, and can be trained on personal devices.
+
+### MaskSketch: Unpaired Structure-guided Masked Image Generation ([arxiv](https://arxiv.org/abs/2302.05496), 10 Feb 2023)
+
+1. Problem: Current conditional image generation methods have limited control over the generation result due to conditioning only on labels or text prompts.
+2. Solution: MaskSketch introduces spatial conditioning of the generation result using a guiding sketch as an extra conditioning signal during sampling, utilizing a pre-trained masked generative transformer and intermediate self-attention maps to enable structure-guided generation.
+3. Insight: Intermediate self-attention maps of a masked generative transformer encode important structural information of the input image, such as scene layout and object shape.
+
+### Zero-shot Image-to-Image Translation ([arxiv](https://arxiv.org/abs/2302.03027), 6 Feb 2023)
+
+1. Problem: Difficulties in editing real images using text prompts due to the challenge of accurately describing visual details and unexpected changes in unwanted regions.
+2. Solution: pix2pix-zero, an image-to-image translation method that automatically discovers editing directions and preserves the content of the original image without manual prompting. It uses cross-attention guidance to retain the cross-attention maps of the input image throughout the diffusion process and can directly use existing pre-trained text-to-image diffusion models.
+3. Insight: Discovering editing directions and retaining cross-attention maps can improve image editing while preserving the content structure.
+
+### Design Booster: A Text-Guided Diffusion Model for Image Translation with Spatial Layout Preservation ([arxiv](https://arxiv.org/abs/2302.02284), 5 Feb 2023)
+
+1. Problem: Maintaining spatial structure and high-quality content in image translation with diffusion models.
+2. Solution: Learning a layout-aware image condition and a text condition in a new domain during training, and using them flexibly as conditions in the inference stage.
+3. Insight: Co-encoding images and text can help maintain spatial structure and high-quality content in image translation, while giving users more flexible control over layout and content.
