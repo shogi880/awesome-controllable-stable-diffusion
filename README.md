@@ -105,5 +105,26 @@ A Survey of Controllable Editing Stable Diffusion
 2. Solution: GLIGEN proposes a novel approach that combines grounding inputs with pre-trained text-to-image diffusion models to achieve open-world grounded text-to-image generation with caption and bounding box condition inputs.
 3. Insight: GLIGEN's gated mechanism preserves the vast concept knowledge of the pre-trained model and enables it to generalize well to novel spatial configurations and concepts, outperforming existing supervised layout-to-image baselines.
 
+### Imagen Editor and EditBench: Advancing and Evaluating Text-Guided Image Inpainting ([arxiv](https://arxiv.org/abs/2212.06909), 13 Dec 2022)
 
-# SmartBrush: Text and Shape Guided Object Inpainting with Diffusion Model (arxiv, 9 Dec 20)
+1. Problem: Generating faithful edits to input text prompts while consistent with input images.
+2. Solution: Imagen Editor, a cascaded diffusion model that uses object detectors to propose inpainting masks during training and conditions on the original high-resolution image to capture fine details.
+3. Insight: Object-masking during training leads to across-the-board improvements in text-image alignment and human evaluation on EditBench shows Imagen Editor outperforms DALL-E 2 and Stable Diffusion.
+
+### SmartBrush: Text and Shape Guided Object Inpainting with Diffusion Model ([arxiv](https://arxiv.org/abs/2212.05034), 9 Dec 2022)
+
+1. Problem: Traditional image inpainting methods lack flexibility and cannot generate novel content.
+2. Solution: The proposed SmartBrush model enables more precise control over inpainted content through both text and shape guidance. It incorporates a novel training and sampling strategy to preserve the background texture and uses a multi-task training strategy to leverage more data.
+3. Insight: Combining text and shape guidance provides more flexible and useful controls over the inpainted content, enabling the generation of more novel content
+
+### Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis ([arxiv](https://arxiv.org/abs/2212.05032), 9 Dec 2022)
+
+1. Problem: The attribution-binding and compositional capabilities of large-scale diffusion models for text-to-image synthesis involving multiple objects are still challenging issues.
+2. Solution: Incorporating linguistic structures with the diffusion guidance process based on the controllable properties of manipulating cross-attention layers in diffusion-based T2I models to improve compositional skills.
+3. Insight: Keys and values in cross-attention layers have strong semantic meanings associated with object layouts and content, which can be better preserved by manipulating the cross-attention representations based on linguistic insights.
+
+### Multi-Concept Customization of Text-to-Image Diffusion ([arxiv](https://arxiv.org/abs/2212.04488), 8 Dec 2023)
+
+1. Problem: Generative models are limited in their ability to synthesize instantiations of new concepts.
+2. Solution: Custom Diffusion, an efficient method for augmenting existing text-to-image models, allows for the quick acquisition of new concepts and the composition of multiple new concepts together.
+3. Insight: Optimizing only a few parameters in the text-to-image conditioning mechanism is sufficiently powerful to represent new concepts while enabling fast tuning.
