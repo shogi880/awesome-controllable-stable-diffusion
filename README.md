@@ -37,5 +37,3 @@ A Survey of Controllable Editing Stable Diffusion
 2. Solution: Encoder-based domain tuning approach by underfitting on a large set of concepts from a given domain, employing an encoder and regularized weight-offsets for the text-to-image model.
 3. Insight: Underfitting on a large set of concepts from a given domain improves generalization and creates a model that is more amenable to quickly adding novel concepts from the same domain.
 4. Limitation: The proposed approach may not generalize well to domains with highly diverse or unrelated concep
-
-A Survey of Controllable Editing Stable Diffusion
