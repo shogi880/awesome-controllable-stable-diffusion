@@ -123,8 +123,56 @@ A Survey of Controllable Editing Stable Diffusion
 2. Solution: Incorporating linguistic structures with the diffusion guidance process based on the controllable properties of manipulating cross-attention layers in diffusion-based T2I models to improve compositional skills.
 3. Insight: Keys and values in cross-attention layers have strong semantic meanings associated with object layouts and content, which can be better preserved by manipulating the cross-attention representations based on linguistic insights.
 
-### Multi-Concept Customization of Text-to-Image Diffusion ([arxiv](https://arxiv.org/abs/2212.04488), 8 Dec 2023)
+### Multi-Concept Customization of Text-to-Image Diffusion ([arxiv](https://arxiv.org/abs/2212.04488), 8 Dec 2022)
 
 1. Problem: Generative models are limited in their ability to synthesize instantiations of new concepts.
 2. Solution: Custom Diffusion, an efficient method for augmenting existing text-to-image models, allows for the quick acquisition of new concepts and the composition of multiple new concepts together.
 3. Insight: Optimizing only a few parameters in the text-to-image conditioning mechanism is sufficiently powerful to represent new concepts while enabling fast tuning.
+
+### Sketch-Guided Text-to-Image Diffusion Models ([arxiv](https://arxiv.org/abs/2211.13752), 24 Nov 2022)
+
+1. Problem: Lack of control handles to guide spatial properties of synthesized images by text-to-image models.
+2. Solution: Introduce a universal approach using a Latent Guidance Predictor (LGP) to guide a pretrained text-to-image diffusion model with a spatial map from another domain during inference time, without requiring a dedicated model or specialized encoder for the task.
+3. Insight: The per-pixel training of LGP offers flexibility and locality, allowing the technique to perform well on out-of-domain sketches, including free-hand style drawings
+
+### Paint by Example: Exemplar-based Image Editing with Diffusion Models ([arxiv](https://arxiv.org/abs/2211.13227), 23 Nov 2022)
+
+1. Problem: Lack of precise control in language-guided image editing.
+2. Solution: Exemplar-guided image editing using self-supervised training, information bottleneck, and strong augmentations to avoid artifacts, arbitrary shape mask for the exemplar image, and classifier-free guidance.
+3. Insight: Disentangling and re-organizing source image and exemplar can enable more precise control in image editing.
+
+### Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation ([arxiv](https://arxiv.org/abs/2211.12572), 22 Nov 2022)
+
+1. Problem: Providing users with control over generated images from text-to-image models for real-world content creation tasks.
+2. Solution: A new framework for image-to-image translation that uses a pre-trained text-to-image diffusion model and fine-grained control over spatial features and self-attention to generate a new image that complies with a target text prompt, while preserving the semantic layout of a guidance image.
+3. Insight: Spatial features and self-attention can be manipulated to achieve fine-grained control over generated structure, and guidance images can be used without any training or fine-tuning.
+
+### DreamArtist: Towards Controllable One-Shot Text-to-Image Generation via Contrastive Prompt-Tuning ([arxiv](https://arxiv.org/abs/2211.11337), 21 Nov 2022)
+
+1. Problem: Current text-to-image generation models struggle to synthesize diverse and high-quality images without distortion and artifacts, and suffer from low controllability when new concepts or styles are introduced.
+2. Solution: The DreamArtist method employs contrastive prompt-tuning, using both positive and negative embeddings as pseudo-words to train the model jointly. The positive embedding learns characteristics in the reference image to drive diversified generation, while the negative embedding rectifies mistakes and inadequacies from the positive embedding in reverse.
+3. Insight: The contrastive prompt-tuning approach allows the model to learn not only what is correct but also what should be avoided, leading to higher image quality, diversity, and controllability.
+
+### Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training ([arxiv](https://arxiv.org/abs/2211.11138), 21 Nov 2022)
+
+1. Problem: Difficulty in aligning scene graphs with images due to manually crafted scene layouts.
+2. Solution: Pre-train an encoder to learn scene graph embeddings by optimizing their alignment with images using masked autoencoding and contrastive loss, and build a latent diffusion model to generate images from scene graphs.
+3. Insight: Learning scene graph embeddings directly from images improves compliance between generated images and original scene graphs.
+
+### Null-text Inversion for Editing Real Images using Guided Diffusion Models ([arxiv](https://arxiv.org/abs/2211.09794), 17 Nov 2022)
+
+1. Problem: Current text-guided diffusion models provide powerful image generation capabilities, but editing real images using text only requires inverting the image with a meaningful text prompt into the pretrained model's domain.
+2. Solution: The authors introduce an accurate inversion technique consisting of pivotal inversion for diffusion models and NULL-text optimization to enable intuitive text-based modification of real images.
+3. Insight: Direct inversion is inadequate on its own, but provides a good anchor for optimization. Modifying only the unconditional textual embedding allows for prompt-based editing without tuning the model's weights.
+
+### InstructPix2Pix: Learning to Follow Image Editing Instructions ([arxiv](https://arxiv.org/abs/2211.09800), 17 Nov 2022)
+
+1. Problem: Editing images from human instructions is a challenging task that requires a large dataset of training examples.
+2. Solution: InstructPix2Pix is a conditional diffusion model that learns to follow human instructions to edit images quickly and without per example fine-tuning or inversion.
+3. Insight: InstructPix2Pix is trained on a large dataset of image editing examples generated by combining the knowledge of two large pretrained models, a language model (GPT-3) and a text-to-image model (Stable Diffusion).
+
+### Direct Inversion: Optimization-Free Text-Driven Real Image Editing with Diffusion Models ([arxiv](https://arxiv.org/abs/2211.07825), 15 Nov 2022)
+
+1. Problem: Current methods of text-guided real image editing require optimization or fine-tuning, multiple views, and often struggle with preserving real image identity, semantic coherence, and faithfulness to text guidance.
+2. Solution: The authors propose an optimization-free and zero fine-tuning framework called "Direct Inversion" that applies complex and non-rigid edits to a single real image via a text prompt.
+3. Insight: By using widely-available generic pre-trained text-to-image diffusion models and multiple intuitively configurable hyperparameters, the proposed method can modulate pose, scene, background, style, color, and even racial identity in an extremely flexible manner through a single target text.
