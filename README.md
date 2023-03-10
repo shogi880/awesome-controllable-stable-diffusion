@@ -176,3 +176,43 @@ A Survey of Controllable Editing Stable Diffusion
 1. Problem: Current methods of text-guided real image editing require optimization or fine-tuning, multiple views, and often struggle with preserving real image identity, semantic coherence, and faithfulness to text guidance.
 2. Solution: The authors propose an optimization-free and zero fine-tuning framework called "Direct Inversion" that applies complex and non-rigid edits to a single real image via a text prompt.
 3. Insight: By using widely-available generic pre-trained text-to-image diffusion models and multiple intuitively configurable hyperparameters, the proposed method can modulate pose, scene, background, style, color, and even racial identity in an extremely flexible manner through a single target text.
+
+### Imagic: Text-Based Real Image Editing with Diffusion Models ([arxiv](https://arxiv.org/abs/2210.09276), 17 Oct 2022)
+
+1. Problem: Existing text-based image editing methods are limited to specific editing types or synthetic images, and often require multiple input images.
+2. Solution: "Imagic" is a method that allows for complex text-guided semantic edits on a single real image, without the need for additional inputs. It leverages a pre-trained text-to-image diffusion model to produce a text embedding that aligns with both the input image and the target text.
+3. Insight: This is the first time that complex text-based edits can be applied to a single real image without the need for additional inputs. The method can change the posture and composition of objects within the image while preserving its original characteristics.
+
+### UniTune: Text-Driven Image Editing by Fine Tuning an Image Generation Model on a Single Image ([arxiv](https://arxiv.org/abs/2210.09477), 17 Oct 2022)
+
+1. Problem: Current image editing methods require additional inputs, such as masks or sketches, and lack intuitive art-direction.
+
+2. Solution: UniTune uses a single image and a textual edit description to fine-tune a large text-to-image diffusion model, allowing expressive manipulations while maintaining fidelity to the input image.
+
+3. Insight: The right choice of parameters enables fine-tuning of large-scale models on a single image.
+
+### Unifying Diffusion Models' Latent Space, with Applications to CycleDiffusion and Guidance ([arxiv](https://arxiv.org/abs/2210.05559), 11 Oct 2022)
+
+1. Problem: The commonly-adopted formulation of the latent code of diffusion models is a sequence of gradually denoised samples, which can limit their flexibility and applicability.
+2. Solution: This paper provides an alternative, Gaussian formulation of the latent space of various diffusion models, as well as an invertible DPM-Encoder that maps images into the latent space.
+3. Insight: The proposed formulation allows for intriguing consequences, such as the emergence of a common latent space from two diffusion models trained independently on related domains, and the use of large-scale text-to-image diffusion models as zero-shot image-to-image editors.
+
+### DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation ([arxiv](https://arxiv.org/abs/2208.12242), 25 Aug 2022)
+
+1. Problem: Existing text-to-image models lack the ability to personalize image synthesis based on a given set of reference images of a subject.
+2. Solution: The authors propose a fine-tuning approach that binds a unique identifier with a specific subject, allowing for fully-novel photorealistic images of the subject contextualized in different scenes to be synthesized.
+3. Insight: The authors leverage the semantic prior embedded in the model with a new autogenous class-specific prior preservation loss, enabling the synthesis of subjects in diverse scenes, poses, views, and lighting conditions that do not appear in the reference images.
+
+### Prompt-to-Prompt Image Editing with Cross Attention Control ([arxiv](https://arxiv.org/abs/2208.01626), 2 Aug 2022)
+
+1. Problem: Text-driven image editing models struggle to preserve the original image while making small modifications to the text prompt.
+2. Solution: A prompt-to-prompt editing framework that controls edits with text only, using cross-attention layers to control the relation between the spatial layout of the image and each word in the prompt.
+3. Insight: Cross-attention layers are key to controlling the relationship between image layout and text prompts.
+
+### An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion ([arxiv](https://arxiv.org/abs/2208.01618), 2 Aug 2022)
+
+1. Problem: How can we use language-guided models to generate images of specific unique concepts, modify their appearance, or compose them in new roles and novel scenes?
+2. Solution: The authors present a simple approach that allows creative freedom in text-to-image generation. Using only 3-5 images of a user-provided concept, they learn to represent it through new "words" in the embedding space of a frozen text-to-image model. These "words" can be composed into natural language sentences, guiding personalized creation in an intuitive way.
+3. Insight: The authors find evidence that a single word embedding is sufficient for capturing unique and varied concepts, and demonstrate that their approach can more faithfully portray concepts across a range of applications and tasks.
+
+# Pretraining is All You Need for Image-to-Image Translation
