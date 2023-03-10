@@ -92,3 +92,18 @@ A Survey of Controllable Editing Stable Diffusion
 1. Problem: Maintaining spatial structure and high-quality content in image translation with diffusion models.
 2. Solution: Learning a layout-aware image condition and a text condition in a new domain during training, and using them flexibly as conditions in the inference stage.
 3. Insight: Co-encoding images and text can help maintain spatial structure and high-quality content in image translation, while giving users more flexible control over layout and content.
+
+### SEGA: Instructing Diffusion using Semantic Dimensions ([arxiv](https://arxiv.org/abs/2301.12247), 28 Jan 2023)
+
+1. Problem: Achieving one-shot generation of high-fidelity images aligned with user intent is nearly impossible with current text-to-image diffusion models, leaving users with little semantic control.
+2. Solution: SEGA (Semantic guidance) allows for flexible steering of the diffusion process along semantic directions, enabling subtle and extensive edits, changes in composition and style, and optimization of overall artistic conception.
+3. Insight: Interacting with the diffusion process along semantic dimensions enables greater user control and opens up new possibilities for generating high-quality images from text.
+
+### GLIGEN: Open-Set Grounded Text-to-Image Generation ([arxiv](https://arxiv.org/abs/2301.07093), 17 Jan 2023)
+
+1. Problem: Existing text-to-image diffusion models lack controllability due to reliance on text input alone.
+2. Solution: GLIGEN proposes a novel approach that combines grounding inputs with pre-trained text-to-image diffusion models to achieve open-world grounded text-to-image generation with caption and bounding box condition inputs.
+3. Insight: GLIGEN's gated mechanism preserves the vast concept knowledge of the pre-trained model and enables it to generalize well to novel spatial configurations and concepts, outperforming existing supervised layout-to-image baselines.
+
+
+# SmartBrush: Text and Shape Guided Object Inpainting with Diffusion Model (arxiv, 9 Dec 20)
