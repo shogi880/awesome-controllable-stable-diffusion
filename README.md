@@ -2,25 +2,26 @@
 
 A Survey of Controllable Editing Stable Diffusion
 
-## Categorization (Work In progress)
+## Categorization (Work In Progress)
 
-|                   | Training Strategy               | Training Target            |  |
-| ----------------- | ------------------------------- | -------------------------- | - |
-| Dreambooth        | Fine-Tuning Original Model      | Original Model             |  |
-| Custom DIffusion  | Fine-Tuning Original Model     | Original Model             |  |
-| Composer          | Traing Additional Module        | Condition Model           |  |
-| T2I-Adapter       | Traing Additional Module        | Condition Model           |  |
-| ControlNet        | Fine-Tuning Additional Module   | Copyed Original Module    |  |
-| GLIGEN            | Training Additional Module      | Condition Model            |  |
-| Textual Inversion | Optimizing Prompt               | Prompt                     |  |
-| DreamArtist       | Optimizing Prompt               | Positibe & Genative Prompt |  |
-| Prompt-to-Prompt  |                                 |                            |  |
-| Plug-and-Play     | Injection                       | Attention Feature          |  |
-| Direact Inversion | Injection                       | Noise                      |  |
-| Pix2Pix-zero      | Injection                       | Attention Feature Guidance |  |
-| Paint-by-Example  | Fine-Tuning                     | Original Model             |  |
-| Imagic            | Fine-Tuning & Optmizing Prompt | Original Model             |  |
-| UniTune           | Fine-Tuning                     |                            |  |
+|                                       | Training Strategy               | Training Target            |  |
+| ------------------------------------- | ------------------------------- | -------------------------- | - |
+| Dreambooth                            | Fine-Tuning Original Model      | Original Model             |  |
+| Custom DIffusion                      | Fine-Tuning Original Model     | Original Model             |  |
+| Composer                              | Traing Additional Module        | Condition Model           |  |
+| T2I-Adapter                           | Traing Additional Module        | Condition Model           |  |
+| ControlNet                            | Fine-Tuning Additional Module   | Copyed Original Module    |  |
+| GLIGEN                                | Training Additional Module      | Condition Model            |  |
+| Textual Inversion                     | Optimizing Prompt               | Prompt                     |  |
+| DreamArtist                           | Optimizing Prompt               | Positibe & Genative Prompt |  |
+| Prompt-to-Prompt                      |                                 |                            |  |
+| Plug-and-Play                         | Injection                       | Attention Feature          |  |
+| Direact Inversion                     | Injection                       | Noise                      |  |
+| Pix2Pix-zero                          | Injection                       | Attention Feature Guidance |  |
+| Paint-by-Example                      | Fine-Tuning                     | Original Model             |  |
+| Imagic                                | Fine-Tuning & Optmizing Prompt | Original Model             |  |
+| UniTune                               | Fine-Tuning                     |                            |  |
+| [Cones](https://arxiv.org/abs/2303.0512) |                                 |                            |  |
 
 ## Paper List
 
